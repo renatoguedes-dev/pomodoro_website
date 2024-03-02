@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Technique Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Include Font Awesome CSS -->
+</head>
+<body class="dark-theme">
+    <button id="light-theme-btn">Light Theme</button>
+    <div class="container">
+        <h1>Pomodoro Timer</h1>
+        <div class="timer-container">
+            <div class="timer">
+                <h2>Focus Time</h2>
+                <div class="timer-inputs">
+                    <div>
+                        <input type="number" id="focus-minutes" value="25" min="1" step="1"> <!-- Focus minutes input -->
+                        <span>minutes</span>
+                    </div>
+                    <div>
+                        <input type="number" id="focus-seconds" value="0" min="0" max="59" step="1"> <!-- Focus seconds input -->
+                        <span>seconds</span>
+                    </div>
+                </div>
+            </div>
+            <div class="timer">
+                <h2>Rest Time</h2>
+                <div class="timer-inputs">
+                    <div>
+                        <input type="number" id="rest-minutes" value="5" min="1" step="1"> <!-- Rest minutes input -->
+                        <span>minutes</span>
+                    </div>
+                    <div>
+                        <input type="number" id="rest-seconds" value="0" min="0" max="59" step="1"> <!-- Rest seconds input -->
+                        <span>seconds</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="watch-container">
+          <div class="round-timers">
+            <div class="watch" id="focus-watch">
+                <div id="focus-timer" class="timer-display">25:00</div>
+            </div>
+            <div class="watch" id="rest-watch">
+                <div id="rest-timer" class="timer-display">05:00</div>
+            </div>
+          </div>
+          <div class="play-pause-btns-div">
+
+            <div class="pomodoro-btns">
+              <!-- Button for Pomodoro timer -->
+              <button id="pomodoro-start-pause-btn" class="round-btn"><i id="pomodoro-start-pause-icon" class="fas fa-play"></i></button>
+              <button id="pomodoro-stop-btn" class="round-btn"><i id="pomodoro-stop-icon" class="fas fa-stop"></i></button>
+            </div>
+
+            <div class="rest-btns">
+              <!-- Button for Rest timer -->
+              <button id="rest-start-pause-btn" class="round-btn"><i id="rest-start-pause-icon" class="fas fa-play"></i></button>          
+              <button id="rest-stop-btn" class="round-btn"><i id="rest-stop-icon" class="fas fa-stop"></i></button>
+            </div>
+
+          </div>
+        </div>
+        <div class="history-container">
+            <h2>History</h2>
+            <!-- History will be displayed here -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
